@@ -8,7 +8,6 @@ from flask_login import login_required, login_user
 from models import login_man
 from werkzeug.security import generate_password_hash, check_password_hash
 
-# Run source/venv/bin/activate
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Thisissecret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -78,4 +77,4 @@ def login():
 
 # ---------------------------
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
