@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+
+{% block title %} FAQ Page {% endblock %}
+
+<!------------>
+<!--Content-->
+{% block content %}
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" 
+              data-toggle="collapse" data-target="#navbarTogglerDemo03" 
+              aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"
+          >
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('home_page') }}">ZENSPHERE</a>
+      <!------------>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
+                  <li class="nav-item active text-center">
+                      <a class="nav-link" href="">
+                          Features 
+                          <span class="sr-only">(current)</span>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{url_for('faq')}}">FAQ</a>
+                  </li>
+          </ul>
+          <!-------------------->
+          <!--Buttons-->
+          <form class="form-inline my-2 my-lg-0">
+              <a href="{{url_for('signup')}}">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up</button>
+              </a>
+              <a href="{{url_for('login')}}">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Login</button>
+              </a>
+          </form>
+      </div>
+    </nav>  
+  <!--End of Navbar-->
+  <!---------------------------->
+  <!--FAQ Section-->
+  <main>
+    <section class="bg-light py-3 py-md-5">
+      <div class="container">
+        <div class="row gy-5 gy-lg-0 align-items-lg-center">
+          <div class="col-12 col-lg-6">
+            <img class="img-fluid rounded" loading="lazy" 
+              src="https://wpvip.edutopia.org/wp-content/uploads/2022/10/SupportiveClassroom_hero-2880x1620_FINAL.jpg?resize=875,625&quality=85" alt="Supportive Class">
+          </div>
+          <!------------------->
+          <!--Accordion Section-->
+          <div class="col-12 col-lg-6">
+            <div class="row justify-content-xl-end">
+              <div class="col-12 col-xl-11">
+                <h2 class="h1 mb-3">Got Questions?</h2>
+                <p class="lead fs-4 text-secondary mb-5">Check out our frequently asked questions. Don't see your question? Reach out to us!</p>
+                <div class="accordion accordion-flush" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        How much is ZenSphere per month? Are there any contracts?
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>There are no contracts and ZenSphere is free</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How Does ZenSphere works?
+                      </button>
+                    </h2>
+                    <!------------------->
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        ZenSphere works by providing a safe and supportive space to chat to someone else. That person could be a professional.
+                      </div>
+                    </div>
+                  </div>
+                  <!------------------->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Does ZenSphere keep record of anything?
+                      </button>
+                    </h2>
+                    <!------------------->
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>Only inapproiate content or mentions of harm to yourself and/or others.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End of Accordion Section-->
+    </main>
+    <!------------>
+    <!--Footer-->    
+    <footer>
+      <section class="container-fluid">
+          <div class="container-fluid">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                  <div class="col mb-3">
+                      <div class="lc-block">
+                          <div editable="rich">
+                              <h2>ZenSphere</h2>
+                              <p class="text-muted">Privacy-Terms</p>
+                              <p class="text-muted">© 2024 ZenSphere</p>
+                          </div>
+                      </div>
+                  </div>
+                  <!------------------------->
+                  <div class="col offset-md-2 mb-3">
+                      <div class="lc-block mb-4">
+                          <div editable="rich">
+                              <h4>Features</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <!-------------------->
+                  <div class="col mb-3">
+                      <div class="lc-block mb-4">
+                          <div editable="rich">
+                              <h4>About us</h4>
+                          </div>
+                      </div>
+                      <!------------------->
+                      <div class="lc-block small">
+                          <div editable="rich" class="footer-links-list text-decoration-none">
+                              <ul>
+                                  <li><a href="#">Our Story</a> </li>
+                                  <li><a href="#">Work with us</a></li>
+                                  <li><a href="#">Careers</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <!------------------>
+                  <div class="col mb-3">
+                      <div class="lc-block mb-4">
+                          <div editable="rich">
+                              <h4>Resources</h4>
+                          </div>
+                      </div>
+                      <!-------------------->
+                      <div class="lc-block small">
+                          <div editable="rich" class="footer-links-list text-decoration-none">
+                              <ul>
+                                  <li><a href="{{url_for('faq')}}">FAQ</a></li>
+                                  <li><a href="#">Contact Us</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </footer>
+  <!--End of Footer-->
+  </section>
+{% endblock %}
