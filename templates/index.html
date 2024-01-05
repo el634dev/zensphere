@@ -3,7 +3,7 @@
     <!--------------------------->
     <!--Content-->
 {% block content %}
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light overflow-hidden">
         <button class="navbar-toggler" type="button" 
                 data-toggle="collapse" data-target="#navbarTogglerDemo03" 
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"
@@ -15,13 +15,13 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
                 <li class="nav-item active text-center">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="{{ url_for('features') }}">
                         Features 
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="">FAQ</a>
+                    <a class="nav-link" href="{{ url_for('faq') }}">FAQ</a>
                 </li>
           </ul>
           <!-------------------->
@@ -38,10 +38,10 @@
       </nav>
       <!------------------------>
       <!---Hero--->
-      <section class="container col-xxl-8 px-4 py-5 container-fluid">
+      <section class="container col-xxl-8 px-4 py-5 container-fluid overflow-hidden">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="https://www.nickdewilde.com/content/images/size/w2000/2020/08/Super-Community-by-Hurca--for-Hiwow-on-Dribbble-1.png" 
+                    <img src="https://www.nickdewilde.com/content/images/size/w2000/2020/08/Super-Community-by-Hurca--for-Hiwow-on-Dribbble-1.png?resize=875,625&quality=85" 
                          class="d-block mx-lg-auto img-fluid rounded" alt="" loading="lazy">
                 </div>
                 <div class="col-lg-6">
@@ -90,7 +90,7 @@
         <div class="row mb-5 text-center text-xl-start">
             <div class="col-md-12 mt-5">
                 <div class="lc-block">
-                    <div editable="rich">
+                    <div editable="rich text-center">
                         <h2>Dozen of the world’s leading companies trust us</h2>
                     </div>
                 </div>
@@ -100,17 +100,11 @@
             <div class="col py-3">
                 <div class="lc-block">
                     <img class="img-fluid" 
-                        src="https://cdn.livecanvas.com/media/logos/world-logo/samsung.svg" 
-                        width="128" height="128" loading="lazy">
-                </div>
-            </div>
-            <div class="col py-3">
-                <div class="lc-block">
-                    <img class="img-fluid" 
                         src="https://cdn.livecanvas.com/media/logos/world-logo/mailchimp.svg" 
                         width="128" height="128" loading="lazy">
                 </div>
             </div>
+            <!------------------->
             <div class="col py-3">
                 <div class="lc-block">
                     <img class="img-fluid" 
@@ -118,6 +112,7 @@
                         width="128" height="128" loading="lazy">
                 </div>
             </div>
+            <!------------------->
             <div class="col py-3">
                 <div class="lc-block">
                     <img class="img-fluid" 
@@ -125,6 +120,7 @@
                          width="128" height="128" loading="lazy">
                 </div>
             </div>
+            <!------------------->
             <div class="col py-3">
                 <div class="lc-block">
                     <img class="img-fluid" 
@@ -132,6 +128,7 @@
                          width="128" height="128" loading="lazy">
                 </div>
             </div>
+            <!------------------->
             <div class="col py-3">
                 <div class="lc-block">
                     <img class="img-fluid" 
@@ -204,10 +201,11 @@
                                 <h4>About us</h4>
                             </div>
                         </div>
+                        <!------------------->
                         <div class="lc-block small">
-                            <div editable="rich" class="footer-links-list">
+                            <div editable="rich" class="footer-links-list text-decoration-none">
                                 <ul>
-                                    <li><a href="/about">Our Story</a> </li>
+                                    <li><a href="#">Our Story</a> </li>
                                     <li><a href="#">Work with us</a></li>
                                     <li><a href="#">Careers</a></li>
                                 </ul>
@@ -223,9 +221,9 @@
                         </div>
                         <!-------------------->
                         <div class="lc-block small">
-                            <div editable="rich" class="footer-links-list">
+                            <div editable="rich" class="footer-links-list text-decoration-none">
                                 <ul>
-                                    <li><a href="">FAQ</a></li>
+                                    <li><a href="{{url_for('faq')}}">FAQ</a></li>
                                     <li><a href="#">Contact Us</a></li>
                                 </ul>
                             </div>
