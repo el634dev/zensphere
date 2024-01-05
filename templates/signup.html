@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="">FAQ</a>
+                    <a class="nav-link" href="{{ url_for('faq') }}">FAQ</a>
                 </li>
         </ul>
         <!-------------------->
@@ -40,14 +40,87 @@
         </form>
         </div>
     </nav>  
+    <!---------------->
     <!---Signup Form-->
-    <form method="POST" action="/signup">
-            <!--Username-->
-                {{ form.hidden_tag() }}
-                {{ wtf.form_field(form.username) }}
-                {{ wtf.form_field(form.password) }}
-
-            <a href="{{url_for('login')}}">Have an existing account?</a>
-            <button class="btn btn-md btn-primary" type="submit">Signup</button>
-    </form>
+    <main>
+        <div class="container">
+            <h2 class="h2 text-center">Signup</h2>
+            <form method="POST" class="form-group" action="/signup">
+                <!--Username-->
+                    {{ form.hidden_tag() }}
+                    {{ wtf.form_field(form.username) }}
+                    {{ wtf.form_field(form.password) }}
+                <!--End-->
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Not a robot</label>
+                </div>
+                <a href="{{url_for('login')}}">Have an existing account?</a>
+                <button class="btn btn-md btn-primary" type="submit">Signup</button>
+            </form>
+        </div>
+    </main>
+    <!------------------->
+    <!--Footer-->    
+    <footer>
+        <section class="container-fluid">
+            <div class="container-fluid">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                    <div class="col mb-3">
+                        <div class="lc-block">
+                            <div editable="rich">
+                                <h2>ZenSphere</h2>
+                                <p class="text-muted">Privacy-Terms</p>
+                                <p class="text-muted">© 2024 ZenSphere</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------->
+                    <div class="col offset-md-2 mb-3">
+                        <div class="lc-block mb-4">
+                            <div editable="rich">
+                                <h4>Features</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------->
+                    <div class="col mb-3">
+                        <div class="lc-block mb-4">
+                            <div editable="rich">
+                                <h4>About us</h4>
+                            </div>
+                        </div>
+                        <!------------------->
+                        <div class="lc-block small">
+                            <div editable="rich" class="footer-links-list text-decoration-none">
+                                <ul>
+                                    <li><a href="#">Our Story</a> </li>
+                                    <li><a href="#">Work with us</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------>
+                    <div class="col mb-3">
+                        <div class="lc-block mb-4">
+                            <div editable="rich">
+                                <h4>Resources</h4>
+                            </div>
+                        </div>
+                        <!-------------------->
+                        <div class="lc-block small">
+                            <div editable="rich" class="footer-links-list text-decoration-none">
+                                <ul>
+                                    <li><a href="{{url_for('faq')}}">FAQ</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!--End of Footer-->
 {% endblock %}

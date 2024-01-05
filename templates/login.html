@@ -9,37 +9,38 @@
                 data-toggle="collapse" data-target="#navbarTogglerDemo03" 
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"
             >
-        <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="{{ url_for('home_page') }}">ZENSPHERE</a>
         <!------------>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
-                <li class="nav-item active text-center">
-                    <a class="nav-link" href="">
-                        Features 
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="">FAQ</a>
-                </li>
-        </ul>
-        <!-------------------->
-        <!--Buttons-->
-        <form class="form-inline my-2 my-lg-0">
-            <a href="{{url_for('signup')}}">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up</button>
-            </a>
-            <a href="{{url_for('login')}}">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
+                    <li class="nav-item active text-center">
+                        <a class="nav-link" href="">
+                            Features 
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('faq') }}">FAQ</a>
+                    </li>
+            </ul>
+            <!-------------------->
+            <!--Buttons-->
+            <form class="form-inline my-2 my-lg-0">
+                <a href="{{url_for('signup')}}">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up</button>
+                </a>
+                <a href="{{url_for('login')}}">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="button">Login</button>
-            </a>
-        </form>
+                </a>
+            </form>
         </div>
     </nav>  
+    <!-------------->
     <!--Login Form-->
-    <h2 class="h2">Login</h2>
-   <div class="container">
+    <div class="container">
+       <h2 class="h2">Login</h2>
         <form method="POST" class="form-group" action="">
             <!--Username-->
                 {{ form.hidden_tag() }}
@@ -51,7 +52,70 @@
                 <label class="form-check-label" for="exampleCheck1">Not a robot</label>
             </div>
             <a href="{{url_for('signup')}}">Don't have an account?</a>
-            <button class="btn btn-lg btn-primary btn-block" type="type">Login</button>
+            <button class="btn btn-lg btn-primary" type="type">Login</button>
         </form>
    </div>
+   <!------------>
+   <!--Footer-->    
+    <footer>
+        <section class="container-fluid">
+            <div class="container-fluid">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                    <div class="col mb-3">
+                        <div class="lc-block">
+                            <div editable="rich">
+                                <h2>ZenSphere</h2>
+                                <p class="text-muted">Privacy-Terms</p>
+                                <p class="text-muted">© 2024 ZenSphere</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------->
+                    <div class="col offset-md-2 mb-3">
+                        <div class="lc-block mb-4">
+                            <div editable="rich">
+                                <h4>Features</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------->
+                    <div class="col mb-3">
+                        <div class="lc-block mb-4">
+                            <div editable="rich">
+                                <h4>About us</h4>
+                            </div>
+                        </div>
+                        <!------------------->
+                        <div class="lc-block small">
+                            <div editable="rich" class="footer-links-list text-decoration-none">
+                                <ul>
+                                    <li><a href="#">Our Story</a> </li>
+                                    <li><a href="#">Work with us</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------>
+                    <div class="col mb-3">
+                        <div class="lc-block mb-4">
+                            <div editable="rich">
+                                <h4>Resources</h4>
+                            </div>
+                        </div>
+                        <!-------------------->
+                        <div class="lc-block small">
+                            <div editable="rich" class="footer-links-list text-decoration-none">
+                                <ul>
+                                    <li><a href="{{url_for('faq')}}">FAQ</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!--End of Footer-->
 {% endblock %}
