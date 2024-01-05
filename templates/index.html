@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+    {% block title %}{% endblock %}
+    <!--------------------------->
+    <!--Content-->
+{% block content %}
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" 
+                data-toggle="collapse" data-target="#navbarTogglerDemo03" 
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"
+            >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{{ url_for('home_page') }}">ZENSPHERE</a>
+        <!------------>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
+                <li class="nav-item active text-center">
+                    <a class="nav-link" href="">
+                        Features 
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="">FAQ</a>
+                </li>
+          </ul>
+          <!-------------------->
+          <!--Buttons-->
+          <form class="form-inline my-2 my-lg-0">
+            <a href="{{url_for('signup')}}">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up</button>
+            </a>
+            <a href="{{url_for('login')}}">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Login</button>
+            </a>
+          </form>
+        </div>
+      </nav>
+      <!------------------------>
+      <!---Hero--->
+      <section class="container col-xxl-8 px-4 py-5 container-fluid">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="https://www.nickdewilde.com/content/images/size/w2000/2020/08/Super-Community-by-Hurca--for-Hiwow-on-Dribbble-1.png" 
+                         class="d-block mx-lg-auto img-fluid rounded" alt="" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <div class="lc-block mb-3">
+                        <div editable="rich">
+                            <h2 class="fw-bold display-5">ZenSphere helps people get the support they need.</h2>
+                        </div>
+                    </div>
+                    <div class="lc-block mb-3">
+                        <div editable="rich">
+                            <p class="lead">
+                                Chat, create and meet new people. From anywhere in the world, the support you need to get through is here with ZenSphere.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--End of Hero-->
+    <!--Blog Cards -->
+    <div class="row">
+        <div class="col-md-6 how-img">
+            <img src="https://image.ibb.co/dDW27U/Work_Section2_freelance_img1.png" class="rounded-circle img-fluid" alt=""/>
+        </div>
+        <div class="col-md-6">
+            <h4>Meet Supportive Folks</h4>
+            <p class="text-muted">
+                Meet other supportive people who have been there and done that.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Create Supportive Communities</h4>
+            <p class="text-muted">
+                Don't see a community you'd like to exist. Create one that does.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="https://www.teamly.com/blog/wp-content/uploads/2021/11/Supportive-Company-Culture.png" class="rounded img-fluid" alt=""/>
+        </div>
+    </div>
+    <!--End of Blog Cards-->
+    <!--Trusted By Companies-->    
+    <div class="container py-6">
+        <div class="row mb-5 text-center text-xl-start">
+            <div class="col-md-12 mt-5">
+                <div class="lc-block">
+                    <div editable="rich">
+                        <h2>Dozen of the world’s leading companies trust us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-xl-6 text-center text-xl-start align-items-center g-4">
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                        src="https://cdn.livecanvas.com/media/logos/world-logo/samsung.svg" 
+                        width="128" height="128" loading="lazy">
+                </div>
+            </div>
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                        src="https://cdn.livecanvas.com/media/logos/world-logo/mailchimp.svg" 
+                        width="128" height="128" loading="lazy">
+                </div>
+            </div>
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                        src="https://cdn.livecanvas.com/media/logos/world-logo/google.svg" 
+                        width="128" height="128" loading="lazy">
+                </div>
+            </div>
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                         src="https://cdn.livecanvas.com/media/logos/world-logo/netflix.svg" 
+                         width="128" height="128" loading="lazy">
+                </div>
+            </div>
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                         src="https://cdn.livecanvas.com/media/logos/world-logo/cocacola.svg" 
+                         width="128" height="128" loading="lazy">
+                </div>
+            </div>
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                        src="https://cdn.livecanvas.com/media/logos/world-logo/adobe.svg" 
+                        width="128" height="128" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Trusted Section-->
+    <!----------------------->
+    <div class="container py-5 container-fluid">
+        <div class="row min-vh-50 align-items-center">
+            <div class="col-md-12 text-center">
+                <div class="lc-block mb-2">
+                    <div editable="rich">
+                        <h2 class="display-3 fw-bolder">Contact Support</h2>
+                        <p>Need help setting up<br>&nbsp;or confused on something, reach out.&nbsp;</p>
+                    </div>
+                </div>
+                <div class="lc-block border-top col-md-6 offset-md-3">
+                    <div editable="rich">
+                        <h2 class="fw-bolder"><br></h2>
+                    </div>
+                </div>
+                <div class="lc-block mb-3">
+                    <div editable="rich">
+                        <h2 class="fw-bolder">Our Hours</h2>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div editable="rich">
+                        <p>Monday through Thursday: 11:00am – 5:00PM</p>
+                        <button type="submit"  class="btn btn-outline-primary mb-3" href="#" role="button">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div> 
+    <!--End of Reach Out Section-->
+    <!--Footer-->    
+    <footer>
+        <section class="container-fluid">
+            <div class="container-fluid">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                    <div class="col mb-3">
+                        <div class="lc-block">
+                            <div editable="rich">
+                                <h2>ZenSphere</h2>
+                                <p class="text-muted">Privacy-Terms</p>
+                                <p class="text-muted">© 2024 ZenSphere</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------->
+                    <div class="col offset-md-2 mb-3">
+                        <div class="lc-block mb-4">
+                            <div editable="rich">
+                                <h4>Features</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------->
+                    <div class="col mb-3">
+                        <div class="lc-block mb-4">
+                            <div editable="rich">
+                                <h4>About us</h4>
+                            </div>
+                        </div>
+                        <div class="lc-block small">
+                            <div editable="rich" class="footer-links-list">
+                                <ul>
+                                    <li><a href="/about">Our Story</a> </li>
+                                    <li><a href="#">Work with us</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------>
+                    <div class="col mb-3">
+                        <div class="lc-block mb-4">
+                            <div editable="rich">
+                                <h4>Resources</h4>
+                            </div>
+                        </div>
+                        <!-------------------->
+                        <div class="lc-block small">
+                            <div editable="rich" class="footer-links-list">
+                                <ul>
+                                    <li><a href="">FAQ</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!--End of Footer-->
+{% endblock %}

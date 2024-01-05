@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Sign Up{% endblock %}
+<!---------------->
+<!--Content-->
+{% block content %}
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" 
+                data-toggle="collapse" data-target="#navbarTogglerDemo03" 
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"
+            >
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{{ url_for('home_page') }}">ZENSPHERE</a>
+        <!------------>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
+                <li class="nav-item active text-center">
+                    <a class="nav-link" href="">
+                        Features 
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="">FAQ</a>
+                </li>
+        </ul>
+        <!-------------------->
+        <!--Buttons-->
+        <form class="form-inline my-2 my-lg-0">
+            <a href="{{url_for('signup')}}">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up</button>
+            </a>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button">
+                <a href="{{url_for('login')}}">
+                    Login
+                </a>
+            </button>
+        </form>
+        </div>
+    </nav>  
+    <!---Signup Form-->
+    <form method="POST" action="/signup">
+            <!--Username-->
+                {{ form.hidden_tag() }}
+                {{ wtf.form_field(form.username) }}
+                {{ wtf.form_field(form.password) }}
+
+            <a href="{{url_for('login')}}">Have an existing account?</a>
+            <button class="btn btn-md btn-primary" type="submit">Signup</button>
+    </form>
+{% endblock %}
