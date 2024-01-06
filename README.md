@@ -19,7 +19,7 @@
 
 ## Technologies Used
 - [![Front-End](https://skillicons.dev/icons?i=html,css,bootstrap)](https://skillicons.dev)
-- [[![Back-End](https://skillicons.dev/icons?i=flask,py)](https://skillicons.dev)
+- [![Back-End](https://skillicons.dev/icons?i=flask,py)](https://skillicons.dev)
 
 ## Features
 List the ready features here:
