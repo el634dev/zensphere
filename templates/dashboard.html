@@ -26,11 +26,10 @@
           <!-------------------->
           <!--Buttons-->
           <form class="form-inline my-2 my-lg-0">
-              <a href="{{url_for('signup')}}">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up</button>
-              </a>
               <a href="{{url_for('login')}}">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Login</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button">
+                  Logout
+                </button>
               </a>
           </form>
       </div>
@@ -44,12 +43,16 @@
                 <div class="card-body text-center">
                   <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
                     class="rounded-circle img-fluid" style="width: 150px;">
-                  <h5 class="my-3">John Smith</h5>
-                  <p class="text-muted mb-1">Full Stack Developer</p>
-                  <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
-                  <div class="d-flex justify-content-center mb-2">
-                    <button type="button" class="btn btn-primary">Follow</button>
-                    <button type="button" class="btn btn-outline-primary ms-1">Message</button>
+                  <h5 class="my-3">{{ username }}</h5>
+                  <p class="text-muted mb-4">United States</p>
+                  <div class="d-flex justify-content-center mb-2 align-items-center">
+                    <!--Chatroom-->
+                    <a href="{{url_for('chatroom')}}">
+                      <button type="button" name="joinroom" class="btn btn-outline-primary ms-1">
+                        Join Room
+                      </button>
+                    </a>
+                    <!-- <button type="submit" class="btn btn-primary w-50">Create Chatroom</button> -->
                   </div>
                 </div>
               </div>
@@ -201,4 +204,67 @@
           </div>
         </div>
       </section>
+    <!------------>
+    <!--Footer-->    
+    <footer>
+      <section class="container-fluid">
+          <div class="container-fluid">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                  <div class="col mb-3">
+                      <div class="lc-block">
+                          <div editable="rich">
+                              <h2>ZenSphere</h2>
+                              <p class="text-muted">Privacy-Terms</p>
+                              <p class="text-muted">© 2024 ZenSphere</p>
+                          </div>
+                      </div>
+                  </div>
+                  <!------------------------->
+                  <div class="col offset-md-2 mb-3">
+                      <div class="lc-block mb-4">
+                          <div editable="rich">
+                              <h4>Features</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <!-------------------->
+                  <div class="col mb-3">
+                      <div class="lc-block mb-4">
+                          <div editable="rich">
+                              <h4>About us</h4>
+                          </div>
+                      </div>
+                      <!------------------->
+                      <div class="lc-block small">
+                          <div editable="rich" class="footer-links-list text-decoration-none">
+                              <ul>
+                                  <li><a href="#">Our Story</a> </li>
+                                  <li><a href="#">Work with us</a></li>
+                                  <li><a href="#">Careers</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <!------------------>
+                  <div class="col mb-3">
+                      <div class="lc-block mb-4">
+                          <div editable="rich">
+                              <h4>Resources</h4>
+                          </div>
+                      </div>
+                      <!-------------------->
+                      <div class="lc-block small">
+                          <div editable="rich" class="footer-links-list text-decoration-none">
+                              <ul>
+                                  <li><a href="{{url_for('faq')}}">FAQ</a></li>
+                                  <li><a href="#">Contact Us</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </footer>
+  <!--End of Footer-->
 {% endblock %}
