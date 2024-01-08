@@ -1,13 +1,13 @@
 # Import necessary libraries
 from flask import Flask, render_template, url_for, redirect
 from flask_bootstrap import Bootstrap
-from models import LoginForm, User, RegisterForm, db
+from models import LoginForm, User, RegisterForm, db, login_man
 from flask_sqlalchemy import SQLAlchemy
-from passlib.hash import pbkdf2_sha256
+# from passlib.hash import pbkdf2_sha256
 from flask_login import login_required, login_user
-from models import login_man
-from werkzeug.security import generate_password_hash, check_password_hash
+#from werkzeug.security import generate_password_hash, check_password_hash
 
+# Run source/venv/bin/activate
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Thisissecret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -58,7 +58,6 @@ def features():
 def dashboard():
     return render_template('dashboard.html')
 
-
 # -------------------
 # Route for login
 @app.route('/login', methods=['GET', 'POST'])
@@ -75,6 +74,13 @@ def login():
         # return '<h1> Welcome ' + form.username.data + '</h1>'
     return render_template('login.html', form=form)
 
+
+# --------------------
+# Route for chatroom
+@app.route("/chatroom")
+def chatroom():
+    return render_template("chatroom.html")
+
 # ---------------------------
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
