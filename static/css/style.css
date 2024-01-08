@@ -1,0 +1,18 @@
+/* Styling for tags inside of chatroom */
+#chat {
+    width: 50%;
+}
+
+#chat input {
+    align-self: center;
+    width: 50%;
+}
+
+ul {
+    background-color: white;
+    overflow-y: hidden;
+}
+
+li {
+    list-style: none;
+}
