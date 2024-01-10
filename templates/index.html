@@ -26,12 +26,12 @@
           </ul>
           <!-------------------->
           <!--Buttons-->
-          <form class="form-inline my-2 my-lg-0">
+          <form class="form-inline my-2 my-lg-0 g-2">
             <a href="{{url_for('signup')}}">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up</button>
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="button">Sign Up</button>
             </a>
             <a href="{{url_for('login')}}">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Login</button>
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="button">Login</button>
             </a>
           </form>
         </div>
@@ -61,27 +61,56 @@
             </div>
         </section>
     <!--End of Hero-->
-    <!--Blog Cards -->
+    <!--Cards Section-->
     <div class="row">
-        <div class="col-md-6 how-img">
-            <img src="https://image.ibb.co/dDW27U/Work_Section2_freelance_img1.png" class="rounded-circle img-fluid" alt=""/>
-        </div>
-        <div class="col-md-6">
-            <h4>Meet Supportive Folks</h4>
-            <p class="text-muted">
-                Meet other supportive people who have been there and done that.
-            </p>
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{{ url_for('static', filename='support.png') }}"
+                class="d-block mx-md-auto img-fluid rounded w-75" alt="" loading="lazy">
+         </div>
+         <div class="col-lg-6">
+                <div class="lc-block mb-3">
+                    <div editable="rich">
+                        <h4>
+                            Meet Supportive Folks
+                        </h4>
+                    </div>
+                </div>
+                <div class="lc-block mb-3">
+                    <div editable="rich">
+                        <p class="lead">
+                           Meet other supportive people who have been in your shoes.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <h4>Create Supportive Communities</h4>
-            <p class="text-muted">
-                Don't see a community you'd like to exist. Create one that does.
-            </p>
-        </div>
-        <div class="col-md-6">
-            <img src="https://www.teamly.com/blog/wp-content/uploads/2021/11/Supportive-Company-Culture.png" class="rounded img-fluid" alt=""/>
+    <!--Supportive Communities Card-->
+    <div class="row mt-4 ml-4">
+         <div class="col-md-6">
+                <div class="lc-block mb-3">
+                    <div editable="rich">
+                        <h4>
+                            Create Supportive Communities
+                        </h4>
+                    </div>
+                </div>
+                <!------------->
+                <div class="lc-block mb-3">
+                    <div editable="rich">
+                        <p class="lead">
+                           Don't see a community you want to exist. Create one that does.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-------------->
+            <div class="col-10 col-sm-8 col-lg-6">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="https://img.freepik.com/premium-vector/biophilic-design-workspace-abstract-concept-vector-illustration_107173-24984.jpg?w=2000"
+                        class="img-fluid rounded w-100" alt="" loading="lazy">
+                </div>
+            </div>
         </div>
     </div>
     <!--End of Blog Cards-->
@@ -90,15 +119,16 @@
         <div class="row mb-5 text-center text-xl-start">
             <div class="col-md-12 mt-5">
                 <div class="lc-block">
-                    <div editable="rich text-center">
-                        <h2>Dozen of the world’s leading companies trust us</h2>
+                    <div editable="rich" class="text-center">
+                        <h2 class="h2">Dozen of leading companies trust us.</h2>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-xl-6 text-center text-xl-start align-items-center g-4">
+        <!--Icons-->
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-xl-6 text-center text-xl-start d-flex align-items-center g-4">
             <div class="col py-3">
-                <div class="lc-block">
+                <div class="lc-block align-items-center">
                     <img class="img-fluid" 
                         src="https://cdn.livecanvas.com/media/logos/world-logo/mailchimp.svg" 
                         width="128" height="128" loading="lazy">
@@ -182,7 +212,7 @@
                             <div editable="rich">
                                 <h2>ZenSphere</h2>
                                 <p class="text-muted">Privacy-Terms</p>
-                                <p class="text-muted">© 2024 ZenSphere</p>
+                                <p class="text-muted">©2024 ZenSphere</p>
                             </div>
                         </div>
                     </div>
@@ -191,6 +221,20 @@
                         <div class="lc-block mb-4">
                             <div editable="rich">
                                 <h4>Features</h4>
+                            </div>
+                        </div>
+                        <!------------>
+                        <div class="lc-block small">
+                            <div editable="rich" class="footer-links-list">
+                                <ul>
+                                    <li>
+                                        <a href="#">Communities</a> 
+                                    </li>
+                                    <!--------->
+                                    <li>
+                                        <a href="#">Chatroom</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -203,11 +247,19 @@
                         </div>
                         <!------------------->
                         <div class="lc-block small">
-                            <div editable="rich" class="footer-links-list text-decoration-none">
+                            <div editable="rich" class="footer-links-list">
                                 <ul>
-                                    <li><a href="#">Our Story</a> </li>
-                                    <li><a href="#">Work with us</a></li>
-                                    <li><a href="#">Careers</a></li>
+                                    <li>
+                                        <a href="#">Our Story</a> 
+                                    </li>
+                                    <!--------->
+                                    <li>
+                                        <a href="#">Work with us</a>
+                                    </li>
+                                    <!--------->
+                                    <li>
+                                        <a href="#">Careers</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -221,10 +273,14 @@
                         </div>
                         <!-------------------->
                         <div class="lc-block small">
-                            <div editable="rich" class="footer-links-list text-decoration-none">
+                            <div editable="rich" class="footer-links-list">
                                 <ul>
-                                    <li><a href="{{url_for('faq')}}">FAQ</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li>
+                                        <a href="{{url_for('faq')}}">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact Us</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
