@@ -7,7 +7,6 @@
 ## Table of Contents
 * [Technologies Used](#technologies-used)
 * [Features](#features)
-* [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
@@ -23,12 +22,9 @@
 ## Features
 List the ready features here:
 - Sign Up and Login Form
+- Auth
 - Multiple responsive web pages
 - Chatroom
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Setup
 What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
@@ -40,7 +36,7 @@ Proceed to describe how to install / setup one's local environment / get started
 `User is able to see dashboard and chatroom after login into the website`
 
 ## Project Status
-Project is: _in progress_ 
+Project is: _completed_ 
 
 ## Room for Improvement
 To do:
