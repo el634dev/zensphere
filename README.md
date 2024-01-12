@@ -64,11 +64,13 @@ See the appropriate guide for your environment and operating system.
   `pip install flask`
 - Make sure that Flask is the current version
 - If using the virtual enivorment make sure to navigate to your folder that you create your env folder and activated your env
-- You can activate your enivorment by typing `source\bin\activate\` and for Windows `.\env\Scripts\activate`
+- You can activate your enivorment by typing `source/venv/bin/activate` and for Windows `.\env\Scripts\activate`
 >
   b. Boostrap Installation
 > Add the link provided by Boostrap in your header located in your HTML file (this could also be your base file).
+>
   >  `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">`
+>
   > Make sure to use version 5 as this is the latest version
 >
   c. Jinja/HTML/CSS Installation
@@ -77,9 +79,9 @@ See the appropriate guide for your environment and operating system.
 
   d. SQLAlchemy/Socket.io Installation
 > Add the link provided by Socket.io in your head tag located in your HTML file (this could also be your base file).
-  >  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
-      integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
-      crossorigin="anonymous"></script>
+> 
+  > `<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>`
+  >
 > SQLAlchemy can be installed by using `pip3 install flask_sqlalchemy` or `pip install flask_sqlalchemy`
 
 ## License
