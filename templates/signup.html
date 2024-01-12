@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %} Sign Up {% endblock %}
+
+<!---------------->
+<!--Main Sign Up FromContent-->
+{% block content %}
+    <nav class="navbar navbar-expand-lg navbar-light overflow-hidden">
+        <button class="navbar-toggler" type="button" 
+                data-toggle="collapse" data-target="#navbarTogglerDemo03" 
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand ml-5" href="{{ url_for('home_page') }}">ZENSPHERE</a>
+        <!------------>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
+                <li class="nav-item active text-center">
+                    <a class="nav-link" href="{{ url_for('features') }}">
+                        Features 
+                        <span class="sr-only">(features)</span>
+                    </a>
+                </li>
+                <li class="nav-item active text-center">
+                    <a class="nav-link" href="{{ url_for('faq') }}">
+                        FAQ
+                        <span class="sr-only">(faq)</span>
+                    </a>
+                </li>
+            </ul>
+            <!-------------------->
+            <!--Buttons-->
+            <form class="form-inline my-2 my-lg-0 g-2">
+                <a href="{{url_for('signup')}}">
+                    <button class="btn btn-outline-primary my-2 my-sm-0 mr-2" type="button">
+                        Sign Up
+                    </button>
+                </a>
+                <a href="{{url_for('login')}}">
+                    <button class="btn btn-outline-primary my-2 my-sm-0 mr-4" type="button">
+                        Login
+                    </button>
+                </a>
+            </form>
+        </div>
+    </nav>
+    <!------------------------>
+    <!--End of Navbar-->
+    <!---Signup Form-->
+    <main>
+        <div class="container container-fluid">
+            <h2 class="h2 text-center">Signup</h2>
+            <form method="POST" class="form-group" action="/signup">
+                <!--Form Data-->
+                    {{ form.hidden_tag() }}
+                    {{ wtf.form_field(form.username) }}
+                    {{ wtf.form_field(form.password) }}
+                <!--End of Form Data-->
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Not a robot</label>
+                </div>
+                <a href="{{url_for('login')}}" class="mr-2">Have an existing account?</a>
+                <button class="btn btn-md btn-primary" type="submit">Signup</button>
+            </form>
+        </div>
+    </main>
+    <!------------------->
+     <!--Footer-->    
+     <footer class="w-100 py-4 flex-shrink-0">
+        <div class="container py-4 container-fluid">
+            <div class="row gy-4 gx-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="h1">ZENSPHERE</h5>
+                    <p class="small text-muted">
+                        Helping people get the support they need. From anywhere in the world the support you need is here.
+                    </p>
+                    <p class="small text-muted mb-0">
+                        &copy;2024. All rights reserved. 
+                    </p>
+                </div>
+                <!--Quick Links-->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-3">Quick links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li>
+                            <a href="{{ url_for('home_page') }}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('features') }}">Features</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('login') }}">Login</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('faq') }}">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Resources Section-->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-3">Resources</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">Work with Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Newsletter Section-->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-3">Newsletter</h5>
+                    <p class="small text-muted">Sign up to get notified of anything awesome first.</p>
+                    <form action="#">
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="text" placeholder="Email" 
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" id="button-addon2" type="button">
+                               Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End of Footer-->
+{% endblock %}

@@ -1,0 +1,288 @@
+{% extends 'base.html' %}
+
+{% block title %} ZenSphere-Get The Support{% endblock %}
+
+<!--------------------------->
+<!--Main Content of the Landing Page-->
+{% block content %}
+    <nav class="navbar navbar-expand-lg navbar-light overflow-hidden">
+        <button class="navbar-toggler" type="button" 
+                data-toggle="collapse" data-target="#navbarTogglerDemo03" 
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand ml-5" href="{{ url_for('home_page') }}">ZENSPHERE</a>
+        <!------------>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
+                <li class="nav-item active text-center">
+                    <a class="nav-link" href="{{ url_for('features') }}">
+                        Features 
+                        <span class="sr-only">(features)</span>
+                    </a>
+                </li>
+                <li class="nav-item active text-center">
+                    <a class="nav-link" href="{{ url_for('faq') }}">
+                        FAQ
+                        <span class="sr-only">(faq)</span>
+                    </a>
+                </li>
+          </ul>
+          <!-------------------->
+          <!--Buttons-->
+          <form class="form-inline my-2 my-lg-0 g-2">
+            <a href="{{url_for('signup')}}">
+                <button class="btn btn-outline-primary my-2 my-sm-0 mr-2" type="button">
+                    Sign Up
+                </button>
+            </a>
+            <a href="{{url_for('login')}}">
+                <button class="btn btn-outline-primary my-2 my-sm-0 mr-4" type="button">
+                    Login
+                </button>
+            </a>
+          </form>
+        </div>
+      </nav>
+      <!------------------------>
+      <!---Hero Section--->
+      <section class="container col-xxl-8 px-4 py-5 container-fluid overflow-hidden">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="https://www.nickdewilde.com/content/images/size/w2000/2020/08/Super-Community-by-Hurca--for-Hiwow-on-Dribbble-1.png?resize=875,625&quality=85" 
+                         class="d-block mx-lg-auto img-fluid rounded" alt="" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <div class="lc-block mb-3">
+                        <div editable="rich">
+                            <h2 class="fw-bold display-5">ZenSphere helps people get the support they need.</h2>
+                        </div>
+                    </div>
+                    <div class="lc-block mb-3">
+                        <div editable="rich">
+                            <p class="lead">
+                                Chat, create and meet new people. From anywhere in the world, the support you need to get through is here with ZenSphere.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--End of Hero-->
+    <!--Cards Section-->
+    <div class="row">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{{ url_for('static', filename='support.png') }}"
+                class="d-block mx-md-auto img-fluid rounded w-75" alt="" loading="lazy">
+         </div>
+         <div class="col-lg-6">
+                <div class="lc-block mb-3">
+                    <div editable="rich">
+                        <h4>
+                            Meet Supportive Folks
+                        </h4>
+                    </div>
+                </div>
+                <div class="lc-block mb-3">
+                    <div editable="rich">
+                        <p class="lead">
+                           Meet other supportive people who have been in your shoes <br>and can offer support.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Supportive Communities Card-->
+    <div class="row mt-4 ml-4">
+        <div class="col-lg-6">
+            <div class="lc-block mb-3 supportive">
+                <div editable="rich">
+                    <h4>
+                        Create Supportive Communities.
+                    </h4>
+                </div>
+            </div>
+            <div class="lc-block mb-3 supportive">
+                <div editable="rich">
+                    <p class="lead">
+                       Don't see a chatroom you'd want to exist. Create one that does.
+                    </p>
+                </div>
+            </div>
+        </div>
+            <!-------------->
+            <div class="col-10 col-sm-8 col-lg-6">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="https://img.freepik.com/premium-vector/biophilic-design-workspace-abstract-concept-vector-illustration_107173-24984.jpg?w=2000"
+                        class="d-block mx-md-auto img-fluid rounded support" width="500" height="500" alt="" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Blog Cards-->
+    <!--Trusted By Companies-->    
+    <div class="container container-fluid py-6">
+        <div class="row mb-5 text-center text-xl-start">
+            <div class="col-md-12 mt-5">
+                <div class="lc-block">
+                    <div editable="rich" class="text-center">
+                        <h2 class="h2">Dozen of leading companies trust us.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Icons-->
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-xl-6 text-center text-xl-start d-flex align-items-center g-4">
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                        src="https://cdn.livecanvas.com/media/logos/world-logo/mailchimp.svg" 
+                        width="128" height="128" loading="lazy">
+                </div>
+            </div>
+            <!------------------->
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                        src="https://cdn.livecanvas.com/media/logos/world-logo/google.svg" 
+                        width="128" height="128" loading="lazy">
+                </div>
+            </div>
+            <!------------------->
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                         src="https://cdn.livecanvas.com/media/logos/world-logo/netflix.svg" 
+                         width="128" height="128" loading="lazy">
+                </div>
+            </div>
+            <!------------------->
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                         src="https://cdn.livecanvas.com/media/logos/world-logo/cocacola.svg" 
+                         width="128" height="128" loading="lazy">
+                </div>
+            </div>
+            <!------------------->
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                        src="https://cdn.livecanvas.com/media/logos/world-logo/adobe.svg" 
+                        width="128" height="128" loading="lazy">
+                </div>
+            </div>
+            <!------------------->
+            <div class="col py-3">
+                <div class="lc-block">
+                    <img class="img-fluid" 
+                        src="data:image/png;base64,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" 
+                        width="128" height="128" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Trusted Section-->
+    <!----------------------->
+    <div class="container py-5 container-fluid">
+        <div class="row min-vh-50 align-items-center">
+            <div class="col-md-12 text-center">
+                <div class="lc-block mb-2">
+                    <div editable="rich">
+                        <h2 class="display-3 fw-bolder">Contact Support</h2>
+                        <p>Need help setting up<br>&nbsp;or confused on something, reach out.&nbsp;</p>
+                    </div>
+                </div>
+                <div class="lc-block border-top col-md-6 offset-md-3">
+                    <div editable="rich">
+                        <h2 class="fw-bolder"><br></h2>
+                    </div>
+                </div>
+                <div class="lc-block mb-3">
+                    <div editable="rich">
+                        <h2 class="fw-bolder">Our Hours</h2>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div editable="rich">
+                        <p>Monday through Thursday: 11:00am – 5:00PM</p>
+                        <button type="submit"  class="btn btn-outline-primary mb-3" href="#" role="button">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div> 
+    <!--End of Reach Out Section-->
+    <!--Footer-->    
+    <footer class="w-100 py-4 flex-shrink-0">
+        <div class="container py-4 container-fluid">
+            <div class="row gy-4 gx-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="h1">ZENSPHERE</h5>
+                    <p class="small text-muted">
+                        Helping people get the support they need. From anywhere in the world the support you need is here.
+                    </p>
+                    <p class="small text-muted mb-0">
+                        &copy;2024. All rights reserved. 
+                    </p>
+                </div>
+                <!--Quick Links-->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-3">Quick links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li>
+                            <a href="{{ url_for('home_page') }}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('features') }}">Features</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('login') }}">Login</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('faq') }}">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Resources Section-->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-3">Resources</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">Work with Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Newsletter Section-->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-3">Newsletter</h5>
+                    <p class="small text-muted">Sign up to get notified of anything awesome first.</p>
+                    <form action="#">
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="text" placeholder="Email" 
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" id="button-addon2" type="button">
+                               Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End of Footer-->
+{% endblock %}
